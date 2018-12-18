@@ -1,14 +1,18 @@
 class FacebookService {
     constructor(config) {
+        this.config = config;
+    }
+
+    init() {
         FB.init({   
-            appId: this.appId,
+            appId: this.config.facebookAppId,
             status: true,
             cookie: false,
             xfbml: true,
             version: 'v3.2'
         });
 
-        firebase.initializeApp(config);
+        firebase.initializeApp(this.config);
 
         this.provider = new firebase.auth.FacebookAuthProvider();
         this.provider.addScope("public_profile");
