@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
+var cors = require('cors');
+
 const app = express();
+app.use(cors());
 
 app.get('/config', (req, res) => {
     res.send({
@@ -9,7 +12,8 @@ app.get('/config', (req, res) => {
         databaseURL: process.env.DATABASE_URL,
         projectId: process.env.PROJECT_ID,
         storageBucket: process.env.STORAGE_BUCKET,
-        messagingSenderId: process.env.MESSAGING_SENDER_ID
+        messagingSenderId: process.env.MESSAGING_SENDER_ID,
+        facebookAppId: process.env.FACEBOOK_APP_ID
     });
 });
 
