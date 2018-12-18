@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await service.login()
         const accessToken = response.credential.accessToken;
         const userId = response.additionalUserInfo.profile.id;
-        const res = await service.api(`/${userId}/picture?height=100&width=100&redirect=false`);
 
-        console.log(accessToken);
-        console.log(res);
+        const urls = ["/html/vigor.html", "/html/clarity.html", "/html/reason.html", "/html/resolve.html"]
+
+        const choice = urls[Math.floor(Math.random() * urls.length)];
+
+        window.location += choice;
     })
 })
 
