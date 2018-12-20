@@ -15,7 +15,8 @@ body {
 }
 
 nav {
-  position: relative;
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 8vh;
   background-color: #000000;
@@ -23,7 +24,7 @@ nav {
 }
 
 nav ul {
-  padding-left: 20vh;
+  padding-left: 15vh;
   position: relative;
   list-style: none;
   text-decoration: none;
@@ -39,7 +40,6 @@ nav li {
   position: relative;
   line-height: 7.5vh;
   margin-left: 75px;
-  float: left;
   height: 100%;
   color: #FFF;
   display: inline-block;
@@ -96,18 +96,236 @@ nav li a:hover, nav li a:focus {
 
 #lion {
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   background-image: url("../img/lion-bg.jpg");
   background-size: cover;
   position: relative;
 }
 
-#textbg {
+.textbg {
   position: absolute;
-  width: 500px;
+  width: 35%;
   height: 500px;
-  margin-left: 20px;
-  margin-top: 50px;
-  background-color: green;
+  margin-left: 16vh;
+  margin-top: 25vh;
+  padding-left: 5vh;
+  background-color: #000000;
+}
+
+.textbg h1 {
+  margin: 0;
+  font-family: 'bebasregular';
+  color: #FFF;
+  font-size: 3em;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-spacing: 5px;
+  margin-bottom: 10vh;
+}
+
+.textbg h2 {
+  color: #c8a676 !important;
+  font-family: 'bebasregular';
+  color: #FFF;
+  font-size: 2em;
+  margin-top: 10vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-spacing: 5px;
+}
+
+.textbg a {
+  color: #FFF;
+  padding: 15px 7vh;
+  margin-left: 2.2vh;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c8a676;
+  text-decoration: none;
+  font-family: "bebasregular";
+  -webkit-transition: background-color color 0.2s ease-in-out;
+  transition: background-color color 0.2s ease-in-out;
+}
+
+.textbg a:hover {
+  background-color: #c8a676;
+  color: black;
+}
+
+#release {
+  width: 100%;
+  height: 80vh;
+  background-color: #000000;
+}
+
+.inv-box {
+  width: 70%;
+  margin-left: 23vh;
+  margin-top: 21vh;
+  height: 60vh;
+}
+
+.inv-box .text-box {
+  float: left;
+}
+
+#release p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  color: #FFF;
+  margin-bottom: 15vh;
+}
+
+#release h1 {
+  font-size: 4em;
+  font-family: "bebasregular";
+  color: #FFF;
+  word-spacing: 5px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+#release a {
+  color: black;
+  word-spacing: 5px;
+  padding: 15px 7vh;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c8a676;
+  background-color: #c8a676;
+  text-decoration: none;
+  font-family: "bebasregular";
+  -webkit-transition: background-color color 0.2s ease-in-out;
+  transition: background-color color 0.2s ease-in-out;
+}
+
+#release a:hover {
+  background-color: black;
+  color: white;
+}
+
+.scratch {
+  float: right;
+  background-image: url("../img/lion-scratch-opacity.svg");
+  background-size: cover;
+  width: 53vh;
+  height: 53vh;
+  position: relative;
+  margin-top: -20px;
+}
+
+.scratch img {
+  height: auto;
+  width: 37%;
+  margin-left: 31.5%;
+  margin-right: auto;
+  margin-top: 5vh;
+  position: relative;
+  opacity: 1;
+}
+
+.info {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.info-inv-box {
+  margin-left: 23vh;
+  margin-right: 50vh;
+  padding-top: 15vh;
+}
+
+.panel-heading {
+  padding: 0;
+  border: 0;
+}
+
+.panel-title > a, .panel-title > a:active {
+  display: block;
+  padding: 10px 0px;
+  color: #555;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "bebasregular";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  text-decoration: none;
+}
+
+.panel-heading .with-border {
+  border-top-style: solid;
+  border-color: lightgrey;
+  border-width: 1px;
+}
+
+.panel-heading a:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  float: left;
+  margin-right: 50px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #c8a676;
+}
+
+.panel-heading.active a:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-body {
+  padding-bottom: 3vh;
+  padding-top: 1vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+}
+
+.recommended {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.recommended h1 {
+  color: #FFF;
+  font-family: "bebasregular";
+  word-spacing: 10px;
+  margin-left: 23vh;
+  margin-top: 20vh;
+  font-size: 4em;
+}
+
+.recommended ul {
+  width: 80%;
+  margin-left: 7.5%;
+  margin-top: 15vh;
+  height: 50vh;
+  position: relative;
+}
+
+.recommended ul li {
+  position: relative;
+  width: 15%;
+  margin-right: 5%;
+  margin-left: 5%;
+  float: left;
+  text-decoration: none;
+  list-style: none;
+}
+
+.recommended ul li img {
+  width: 80%;
+  height: auto;
+}
+
+.recommended a {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.recommended a:hover {
+  opacity: 0.7;
 }
 /*# sourceMappingURL=styles.css.map */
