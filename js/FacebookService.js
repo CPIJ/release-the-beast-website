@@ -15,8 +15,8 @@ class FacebookService {
         firebase.initializeApp(this.config);
 
         this.provider = new firebase.auth.FacebookAuthProvider();
-        this.provider.addScope("public_profile");
         this.provider.addScope("email");
+        this.provider.addScope("user_likes");
     }
 
     async api(route, params) {

@@ -13,9 +13,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         const accessToken = response.credential.accessToken;
         const userId = response.additionalUserInfo.profile.id;
 
-        const index = userId % urls.length;
+        const data = await service.api("me", {
+            access_token: accessToken,
+            fields: "id,name,movies{name},music{name},inspirational_people,television{name},sports"
+        });
+
+        let index = 0;
+
+        for (let artist of data.music.data) {
+            index += artist.name.split().reduce((acc, curr) => curr.charCodeAt(0), 0);
+        }
+
+        index %= urls.length;
+
         const choice = urls[index];
- 
         window.location.href = `${baseUrl}${choice}`;
     })
 })
