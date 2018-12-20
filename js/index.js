@@ -1,4 +1,5 @@
-const urls = ["/html/vigor.html", "/html/clarity.html", "/html/reason.html", "/html/resolve.html"]
+const baseUrl = "http://localhost:5500/products"
+const urls = ["/vigor.html", "/clarity.html", "/reason.html", "/resolve.html"]
 
 document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch('http://localhost:3000/config');
@@ -14,8 +15,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const index = userId % urls.length;
         const choice = urls[index];
-
-        window.location += choice;
+ 
+        window.location.href = `${baseUrl}${choice}`;
     })
 })
 
