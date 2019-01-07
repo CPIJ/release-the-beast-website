@@ -118,6 +118,30 @@ nav li a:hover, nav li a:focus{
     position: relative;
 }
 
+#eagle{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/eagle-bg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+#gorilla{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/gorilla-bg.jpg');
+    background-size: cover;
+    position: relative; 
+}
+
+#bear{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/bear-bg.jpg');
+    background-size: cover;
+    position: relative;
+}
+
 .textbg{
     position: absolute;
     width: 35%;
@@ -235,6 +259,7 @@ nav li a:hover, nav li a:focus{
     height: 53vh;
     position: relative;
     margin-top: -20px;
+    opacity: 0.8;
 }
 
 .scratch img{
@@ -242,7 +267,67 @@ nav li a:hover, nav li a:focus{
     width: 37%;
     margin-left: 31.5%;
     margin-right: auto;
-    margin-top: 5vh;
+    margin-top: 5.5vh;
+    position: relative;
+    opacity: 1;
+}
+
+.scratch-eagle{
+    float: right;
+    background-image: url('../img/eagle-scratch.svg');
+    background-size: cover;
+    width: 53vh;
+    height: 53vh;
+    position: relative;
+    margin-top: -20px;   
+}
+
+.scratch-eagle img{
+    height: auto;
+    width: 37%;
+    margin-left: 31.5%;
+    margin-right: auto;
+    margin-top: 5.5vh;
+    position: relative;
+    opacity: 1;
+}
+
+.scratch-bear{
+    float: right;
+    background-image: url('../img/bear-scratch.svg');
+    background-size: cover;
+    width: 60vh;
+    height: 53vh;
+    position: relative;
+    margin-top: -20px; 
+}
+
+.scratch-bear img{
+    height: auto;
+    width: 34%;
+    margin-left: 31.5%;
+    margin-right: auto;
+    margin-top: 5.5vh;
+    position: relative;
+    opacity: 1;
+}
+
+.scratch-gorilla{
+    float: right;
+    background-image: url('../img/gorilla-scratch.svg');
+    background-size: cover;
+    width: 42vh;
+    height: 53vh;
+    position: relative;
+    margin-top: -20px;   
+}
+
+.scratch-gorilla img{
+    height: auto;
+    width: 48%;
+    margin-left: 31.5%;
+    margin-right: auto;
+    margin-top: 5.5vh;
     position: relative;
     opacity: 1;
 }
