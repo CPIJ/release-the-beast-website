@@ -1,6 +1,8 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
 const express = require('express');
-var cors = require('cors');
+const cors = require('cors');
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -17,4 +19,4 @@ app.get('/config', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log("Server started at http://localhost:3000"))
+app.listen(3000, () => console.log("Server started at http://localhost:3000"));
