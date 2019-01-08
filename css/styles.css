@@ -429,14 +429,12 @@ nav li a:hover, nav li a:focus {
 
 .lp-left {
   width: 60%;
-  height: 100vh;
   float: left;
 }
 
 .lp-right {
   width: 40%;
   margin-top: 23vh;
-  height: 100vh;
   float: left;
 }
 
@@ -514,7 +512,7 @@ nav li a:hover, nav li a:focus {
 .logintext {
   margin-left: 2vw;
   margin-right: 2vw;
-  margin-top: 20vh;
+  margin-top: 17.5vh;
   margin-bottom: 10vh;
   font-family: "bebasregular";
   color: #FFF;
