@@ -40,7 +40,7 @@ nav{
 }
 
 nav ul{
-    padding-left: 15vh;
+    padding-left: 15.5vw;
     position: relative;
     list-style: none;
     text-decoration: none;
@@ -55,7 +55,7 @@ nav ul li img{
 nav li{
     position: relative;
     line-height: 7.5vh;
-    margin-left: 75px;
+    margin-right: 75px;
     height: 100%;
     color: #FFF;
     display: inline-block;
@@ -146,9 +146,9 @@ nav li a:hover, nav li a:focus{
     position: absolute;
     width: 35%;
     height: 500px;
-    margin-left: 16vh;
+    margin-left: 11.5vw;
     margin-top: 25vh;
-    padding-left: 5vh;
+    padding-left: 3vw;
     background-color: $bg;  
 }
  
@@ -204,7 +204,7 @@ nav li a:hover, nav li a:focus{
 
 .inv-box{
     width: 70%;
-    margin-left: 23vh;
+    margin-left: 15.5vw;
     margin-top: 21vh;
     height: 60vh;
 }
@@ -340,7 +340,7 @@ nav li a:hover, nav li a:focus{
 } 
 
 .info-inv-box{
-    margin-left: 23vh;
+    margin-left: 15.5vw;
     margin-right: 50vh;
     padding-top: 15vh;
 }
@@ -404,14 +404,14 @@ nav li a:hover, nav li a:focus{
     color: #FFF;
     font-family: $font1;
     word-spacing: $wrd;
-    margin-left: 23vh;
+    margin-left: 15.5vw;
     margin-top: 20vh;
     font-size: 4em;
 }
 
 .recommended ul{
     width: 80%;
-    margin-left: 7.5%;
+    margin-left: 11.5vw;
     margin-top: 15vh;
     height: 50vh;
     position: relative;
@@ -442,4 +442,68 @@ nav li a:hover, nav li a:focus{
 
 .recommended a:hover{
     opacity: 0.7;  
+}
+
+/* Landing page*/
+#landingpage{
+    width: 91%;
+    margin-left: 4.5%;
+    height: 100vh;
+}
+
+.lp-content{
+    padding-top: 18vh;
+    padding-left: 11.1vw;
+    padding-right: 11.1vw;
+}
+
+.lp-left{
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+.lp-right{
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+
+.lp-text h1{
+    margin: 0;
+    font-family: 'bebasregular';
+    color: #FFF;
+    font-size: 3em;
+    padding-right: 20px;
+    word-spacing: 5px;
+    margin-bottom: 2vh;
+}  
+
+.lp-text h2{
+    color: #FFF;
+    font-family: 'bebasregular';
+    color: #FFF;
+    font-size: 2em;
+    padding-right: 20px;
+    word-spacing: 5px;
+}
+
+.lp-text a{
+    color: #FFF;
+    padding: 15px 7vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $main;
+    text-decoration: none;
+    font-family: $font1;
+    -webkit-transition: background-color color $trans1 ease-in-out;
+    -moz-transition: background-color color $trans1 ease-in-out;
+    -ms-transition: background-color color $trans1 ease-in-out;
+    -o-transition: background-color color $trans1 ease-in-out;
+    transition: background-color color $trans1 ease-in-out;
+}
+
+.lp-text a:hover{
+    background-color: $main;
+    color: black; 
 }
