@@ -518,7 +518,7 @@ nav li a:hover, nav li a:focus{
 .lp-right a{
     color: $main;
     background-color: #000;
-    padding: 15px 7vh;
+    padding: 15px 3vh;
     margin-left: 2vw;
     border-style: solid;
     border-width: 1px;
@@ -526,6 +526,8 @@ nav li a:hover, nav li a:focus{
     word-spacing: 2px;
     text-decoration: none;
     font-family: $font1;
+    font-size: 1.2em;
+    position: relative;
     -webkit-transition: background-color color $trans1 ease-in-out;
     -moz-transition: background-color color $trans1 ease-in-out;
     -ms-transition: background-color color $trans1 ease-in-out;
@@ -537,6 +539,11 @@ nav li a:hover, nav li a:focus{
     background-color: $main;
     color: #000;
     border: #000 2px solid; 
+}
+
+.lp-right a i{
+    font-size: 1.3em;
+    margin-right: 8px;
 }
 
 .firstrow{
@@ -558,3 +565,4 @@ nav li a:hover, nav li a:focus{
     color: $main;
     margin-bottom: 10px;
 }
+
