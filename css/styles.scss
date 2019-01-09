@@ -685,10 +685,6 @@ $opa: 0.9;
 }
 
   /* Standard syntax */
-//   @-webkit-keyframes animals {
-//     0%   {opacity: 1; }
-//     25%  {opacity: 0.3; }
-//     50%  {opacity: 1; }
-//     75%  {opacity: 0.3;}
-//     100% {opacity: 1; }
-// }
+  0%   {opacity: 1; }
+  100% {opacity: 0.3; }
+}
