@@ -603,26 +603,26 @@ nav li a:hover, nav li a:focus {
 }
 
 .bear-icon {
-  background-image: url("../img/icons/bear.svg");
+  background-image: url("../img/icons/resolve.svg");
   background-size: 50%;
 }
 
 .gorilla-icon {
-  background-image: url("../img/icons/gorilla.svg");
+  background-image: url("../img/icons/reason.svg");
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   background-size: 30%;
 }
 
 .eagle-icon {
-  background-image: url("../img/icons/eagle.svg");
+  background-image: url("../img/icons/clarity.svg");
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   background-size: 50%;
 }
 
 .lion-icon {
-  background-image: url("../img/icons/lion.svg");
+  background-image: url("../img/icons/vigor.svg");
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   background-size: 50%;
