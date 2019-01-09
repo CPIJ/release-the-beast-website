@@ -664,14 +664,6 @@ nav li a:hover, nav li a:focus {
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes animals {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.3;
-  }
-}
 @keyframes animals {
   0% {
     opacity: 1;
@@ -682,4 +674,12 @@ nav li a:hover, nav li a:focus {
 }
 
 /* Standard syntax */
+@-webkit-keyframes animals {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
