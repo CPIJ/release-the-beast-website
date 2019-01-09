@@ -20,6 +20,9 @@ $wrd:10px;
 // Transition //
 $trans1: 0.2s;
 
+// Opacity background facebook //
+$bg-op: 0.2; 
+
 *{
     padding: 0;
     margin: 0;
@@ -489,7 +492,6 @@ nav li a:hover, nav li a:focus{
 
 .lp-text .bear, .lp-text .gorilla, .lp-text .eagle, .lp-text .lion{
     width: 20%;
-    height: 70vh;
     text-align: center;
     float: left;
     margin-top: 10vh;
@@ -566,45 +568,127 @@ nav li a:hover, nav li a:focus{
     margin-bottom: 10px;
 }
 
+
 /* Overlay */
-.fadeIn {
-    margin-top: 25px;
-    font-size: 21px;
+$opa: 0.9;
+
+#background {
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    z-index: 999;
+    background-color: #000; 
+    opacity: $opa;
+  }
+  
+  .fadeIn {
     text-align: center;
-    animation: fadein 1s;
-    -moz-animation: fadein 1s; /* Firefox */
-    -webkit-animation: fadein 1s; /* Safari and Chrome */
-    -o-animation: fadein 1s; /* Opera */
-}
-@keyframes fadein {
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s;
+    /* Firefox */
+    -webkit-animation: fadein 0.5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+    /* Opera */
+  }
+  
+  @keyframes fadein {
     from {
-        opacity:0;
+      opacity: 0;
     }
     to {
-        opacity:1;
+      opacity: $opa;
     }
-}
-@-moz-keyframes fadein { /* Firefox */
+  }
+  
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
     from {
-        opacity:0;
+      opacity: 0;
     }
     to {
-        opacity:1;
+      opacity: $opa;
     }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
+  }
+
+
+  // fadein 2 //
+
+  .fadeIn2 {
+    text-align: center;
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s;
+    /* Firefox */
+    -webkit-animation: fadein 0.5s;
+    /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+    /* Opera */
+    opacity: 1;
+  }
+  
+  @keyframes fadein2 {
     from {
-        opacity:0;
+      opacity: 0;
     }
     to {
-        opacity:1;
+      opacity: 1;
     }
-}
-@-o-keyframes fadein { /* Opera */
+  }
+  
+  @-webkit-keyframes fadein2 {
+    /* Safari and Chrome */
     from {
-        opacity:0;
+      opacity: 0;
     }
     to {
-        opacity: 1;
+      opacity: 1;
     }
+  }
+
+  // Preloader animation //
+  .bear-icon{ background-image: url('../img/icons/bear.svg'); background-size: 50%;}
+  .gorilla-icon{ background-image: url('../img/icons/gorilla.svg');animation-delay: 0.5s; background-size: 30%;}
+  .eagle-icon{ background-image: url('../img/icons/eagle.svg');animation-delay: 1s; background-size: 50%;}
+  .lion-icon{ background-image: url('../img/icons/lion.svg');animation-delay: 1.5s; background-size: 50%;}
+
+  #animal-wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-300px;/* half width*/
+    margin-top:-50px;/* half height*/
+    z-index: 1000;
+  }
+  
+  #animal-wrapper div {
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-position: center; 
+    float: left;
+    border-color: $main; border-style: solid; border-radius: 50%; border-width: 3px;
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    background-color: #000;
+    position: relative;
+    -webkit-animation-name: animals; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: animals;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+    
+  /* Safari 4.0 - 8.0 */
+  @keyframes animals {
+    0%   {opacity: 1; }
+    100% {opacity: 0.3; }
 }
+
+  /* Standard syntax */
+//   @-webkit-keyframes animals {
+//     0%   {opacity: 1; }
+//     25%  {opacity: 0.3; }
+//     50%  {opacity: 1; }
+//     75%  {opacity: 0.3;}
+//     100% {opacity: 1; }
+// }

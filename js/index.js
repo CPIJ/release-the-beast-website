@@ -9,8 +9,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     service.init();
 
     document.getElementById('login').addEventListener('click', async () => {
-        const data = await getUserData();
-        window.location = getUrl(data);
+        const overlay = document.getElementById('overlay');
+        const background = document.getElementById('background');
+        const animals = document.getElementById('animal-wrapper');
+        overlay.hidden = false;
+        background.classList.add('fadeIn');
+        animals.classList.add('fadeIn2');
+        // const data = await getUserData();
+        // window.location = getUrl(data);
     })
 })
 
