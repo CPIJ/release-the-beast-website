@@ -9,41 +9,64 @@ document.addEventListener("DOMContentLoaded", async () => {
     service.init();
 
     document.getElementById('login').addEventListener('click', async () => {
-        const overlay = document.getElementById('overlay');
-        const background = document.getElementById('background');
-        const animals = document.getElementById('animal-wrapper');
-        overlay.hidden = false;
-        background.classList.add('fadeIn');
-        animals.classList.add('fadeIn2');
-        // const data = await getUserData();
-        // window.location = getUrl(data);
+        const user = await login();
+
+        showOverlay();
+
+        const interests = await getUserInterests(user);
+        console.log('wacht ff..')
+        await wait(1000)
+
+        const animal = getAnimal(interests);
+        
+        document.getElementById('animal-wrapper').hidden = true;
+
+        //img.src = `img/icons/${animal}.svg`
     })
 })
 
-async function getUserData() {
-    const response = await service.login()
-    const accessToken = response.credential.accessToken;
-    const userId = response.additionalUserInfo.profile.id;
+function showOverlay() {
+    const overlay = document.getElementById('overlay');
+    const background = document.getElementById('background');
+    const animals = document.getElementById('animal-wrapper');
+    overlay.hidden = false;
+    background.classList.add('fadeIn');
+    animals.classList.add('fadeIn2');
+}
 
+async function getUserInterests(user) {
     return await service.api("me", {
-        access_token: accessToken,
+        access_token: user.accessToken,
         fields: "id,name,movies{name},music{name},inspirational_people,television{name},sports"
     });
 }
 
-function getUrl(data) {
-    const urls = ["/vigor.html", "/clarity.html", "/reason.html", "/resolve.html"]
+async function login() {
+    const response = await service.login()
+    const accessToken = response.credential.accessToken;
+    const userId = response.additionalUserInfo.profile.id;
+
+    return {
+        userId,
+        accessToken
+    }
+
+}
+
+function getAnimal(data) {
+    const animals = ["vigor", "clarity", "reason", "resolve"]
     let index = 0;
 
     for (let artist of data.music.data) {
         index += artist.name.split().reduce((acc, curr) => curr.charCodeAt(0), 0);
     }
 
-    index %= urls.length;
+    index %= animals.length;
 
-    const choice = urls[index];
-    return `${baseUrl}${choice}`;
+    return animals[index];
 }
 
-
+async function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
