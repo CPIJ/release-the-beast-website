@@ -18,8 +18,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         await wait(1000)
 
         const animal = getAnimal(interests);
-        
+
         document.getElementById('animal-wrapper').hidden = true;
+
+        console.log(animal)
 
         //img.src = `img/icons/${animal}.svg`
     })
@@ -57,12 +59,9 @@ function getAnimal(data) {
     const animals = ["vigor", "clarity", "reason", "resolve"]
     let index = 0;
 
-    for (let artist of data.music.data) {
-        index += artist.name.split().reduce((acc, curr) => curr.charCodeAt(0), 0);
-    }
+    index += data.name.split().reduce((acc, curr) => curr.charCodeAt(0), 0);
 
     index %= animals.length;
-
     return animals[index];
 }
 
