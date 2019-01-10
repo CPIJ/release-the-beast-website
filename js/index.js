@@ -13,17 +13,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         showOverlay();
 
+        /* get fb interests */
         const interests = await getUserInterests(user);
-        console.log('wacht ff..')
-        await wait(1000)
-
+        await wait(5000)
         const animal = getAnimal(interests);
 
+        /* animate fly out */
+        document.getElementById('animal-wrapper').classList.add('flyout');
+        await wait(1000)
         document.getElementById('animal-wrapper').hidden = true;
 
-        console.log(animal)
+        /* show animal */
+        const showAnimal = document.getElementById('chosen-animal');
+        document.getElementById("animal-image").src = `img/icons/${animal}.svg`;
+        showAnimal.hidden = false;
+        document.getElementById("animal-image").classList.add('fadeIn');
+        await wait(3000)
 
-        //img.src = `img/icons/${animal}.svg`
+        /* redirect to webpage */
+        window.location.href = `/products/${animal}.html`;
     })
 })
 
