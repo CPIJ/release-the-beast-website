@@ -728,4 +728,32 @@ nav li a:hover, nav li a:focus {
     opacity: 0;
   }
 }
+
+#snapcode-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 20vw;
+  height: 15vh;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+}
+
+#snapcode-box img {
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  right: 2.5vh;
+  top: 2.5vh;
+  float: right;
+}
+
+#snapcode-box p {
+  font-family: "bebasregular";
+  font-size: 1.4em;
+  width: 11vw;
+  margin-left: 2.5vh;
+  margin-top: 2.5vh;
+  color: #FFF;
+  word-spacing: 5px;
+}
 /*# sourceMappingURL=styles.css.map */
