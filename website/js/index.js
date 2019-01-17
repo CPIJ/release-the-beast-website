@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5500/products"
+const baseUrl = "http://localhost:8080/products"
 let service;
 
 document.addEventListener("DOMContentLoaded", async () => {

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  api:
+    build:
+        context: api/
+    ports:
+      - 3000:3000
+  website:
+      image: nginx:alpine
+      ports:
+          - 8080:80
+      volumes:
+        - ./website:/usr/share/nginx/html
+      depends_on:
+        - api
